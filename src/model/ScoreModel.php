@@ -1,15 +1,7 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: lananh
- * Date: 2020-12-09
- * Time: 16:20
- */
 
 namespace App\model;
 
-
-//use App\controller\StudentController;
 
 class ScoreModel
 {
@@ -31,12 +23,11 @@ class ScoreModel
         $data = $stmt->fetchAll();
 
         return $data;
-
     }
 
     public function addScore($score)
     {
-        $sql = 'INSERT INTO Score VALUES subject_id=:subject_id, student_id=:student_id, score=:score, coefficient=:coefficient';
+        $sql = 'INSERT INTO `Score`(`subject_id`, `student_id`, `score`, `coefficient`) VALUES (:subject_id,:student_id,:score,:coefficient)';
         $stmt = $this->database->prepare($sql);
         $stmt->bindParam(':subject_id', $score->getSubjectId());
         $stmt->bindParam(':student_id', $score->getStudentId());

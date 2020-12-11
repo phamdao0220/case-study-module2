@@ -16,7 +16,6 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <!--        <a class="navbar-brand" href="#">Tim Kiem</a>-->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -33,8 +32,8 @@
                 </li>
                 <a href="index.php?page=add_score" class="btn btn-success">Extra points</a>
             </ul>
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <form  method="post" action="index.php?page=search" class="d-flex">
+                <input  name="search" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
         </div>
@@ -44,8 +43,6 @@
 
 <table class="table">
     <h2 style="text-align: center">Quan ly hoc sinh</h2>
-    <!--    <h3>Diem cua hoc sinh</h3>-->
-    <!--    <h3>Hoc sinh</h3>-->
     <thead class="table-dark">
     <tr>
         <th>STT</th>

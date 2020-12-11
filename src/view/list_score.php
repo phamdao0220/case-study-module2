@@ -16,16 +16,13 @@
 <div class="edu_nav">
     <div class="container">
         <nav class="navbar navbar-expand-md navbar-light bg-faded">
-            <!--            <a class="navbar-brand" href="index.php"><img src="style/images/logo1.jpg" alt="logo"></a>-->
             <div class="collapse navbar-collapse main-menu">
-<!--                <ul class="navbar-nav nav lavalamp ml-auto menu">-->
-<!---->
-<!--                    <li class="nav-item"><a href="index.php?page=list-student" class="nav-link">LIST</a></li>-->
-<!--                    </li>-->
-<!---->
-<!---->
-<!--                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>-->
-<!--                </ul>-->
+                <ul class="navbar-nav nav lavalamp ml-auto menu">
+
+                    <li class="nav-item"><a href="index.php?page=list-student" class="nav-link">LIST</a></li>
+                    </li>
+
+                </ul>
             </div>
         </nav>
     </div>
@@ -54,6 +51,3 @@
 </table>
 
 </html>
-<!--<footer align="center" class="container" style="background-color: black;color: white">-->
-<!--    <p>© Student Manager 2020-2021</p>-->
-<!--</footer>-->

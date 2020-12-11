@@ -20,6 +20,9 @@ switch ($page) {
         $student = isset($_REQUEST['name']) ? $_REQUEST['name'] : "";
         $studentController->show();
         break;
+    case 'search':
+        $studentController->search();
+        break;
     case'delete':
         $studentController->delete();
         break;

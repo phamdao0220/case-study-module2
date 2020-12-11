@@ -26,7 +26,7 @@
 
     <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Class</label>
-        <select name="classNumber">
+        <select name="class">
             //        $ListClass = new \App\controller\StudentController();
             <?php foreach ($classStudent as $class):?>
                 <option value="<?php echo $class->getId()?> "><?php echo $class->getClassName() ?></option>;

@@ -14,7 +14,7 @@ class StudentController
     public function __construct()
     {
         $this->studentModel = new studentModel();
-        $this->classStudentModel=new ClassStudentModel();
+        $this->classStudentModel = new ClassStudentModel();
     }
 
     public function show()
@@ -26,7 +26,7 @@ class StudentController
     public function add()
     {
         if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-            $classStudent=$this->classStudentModel->getClassStudent();
+            $classStudent = $this->classStudentModel->getClassStudent();
             include_once "src/view/add.php";
         } else {
             $name = $_REQUEST['name'];
@@ -52,7 +52,7 @@ class StudentController
 
         if ($_SERVER['REQUEST_METHOD'] == 'GET') {
             $id = $_REQUEST['id'];
-            $classStudent=$this->classStudentModel->getClassStudent();
+            $classStudent = $this->classStudentModel->getClassStudent();
             $student = $this->studentModel->getStudentById($id);
             include_once "src/view/edit.php";
         } else {
@@ -72,7 +72,6 @@ class StudentController
             }
             $newStudent = new student($name, $birthday, $class, $gender, $email, $address, $path);
             $newStudent->setId($id);
-//            var_dump($newStudent);die();
             $this->studentModel->editStudent($newStudent);
             header('location:index.php');
 
@@ -86,10 +85,11 @@ class StudentController
         $this->studentModel->deleteStudent($id);
         header('location:index.php');
     }
+
     public function search()
     {
         $search = '%' . $_REQUEST['search'] . '%';
         $bills = $this->studentModel->find($search);
-        include "src/view/list.php";
+        include "src/view/search.php";
     }
 }

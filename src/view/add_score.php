@@ -12,17 +12,17 @@ $resuls = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <body>
 <h3 style="text-align: center">Nhập Điểm Học Sinh</h3>
 <table align="center" id="tb" class="table" style="width: 400px;align-items: center">
-    <form   method="post">
+    <form method="post">
         <tr>
             <td>
-                <label >Mã HS</label>
+                <label>Mã HS</label>
                 <input type="text" name="student_id" value="<?php echo $id ?>">
             </td>
             <td>
-                <label >Môn Hoc</label>
-                <select name="subject_id" id="">
+                <label>Môn Hoc</label>
+                <select name="subject_id">
                     <?php foreach ($subjects as $subject): ?>
-                    <option value="<?php echo $subject->getId() ?>"><?php echo $subject->getSubjectName() ?></option>
+                        <option value="<?php echo $subject->getId() ?>"><?php echo $subject->getSubjectName() ?></option>
                     <?php endforeach; ?>
 
                 </select>
@@ -31,13 +31,13 @@ $resuls = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <td>
                 <label>Diem</label>
 
-                <input type="text" name="scrore"  placeholder="Nhập điểm">
+                <input type="text" name="score" placeholder="Nhập điểm">
             </td>
 
             <td>
-                <label >He So</label>
+                <label>He So</label>
 
-                <input type="text" name="coefficient"  placeholder="Nhập he so">
+                <input type="text" name="coefficient" placeholder="Nhập he so">
             </td>
 
         </tr>
@@ -53,6 +53,3 @@ $resuls = $stmt->fetchAll(PDO::FETCH_ASSOC);
 </table>
 
 </body>
-<!--<footer align="center" class="container" style="background-color: black;color: white" >-->
-<!--    <p>© Student Manager 2020-2021</p>-->
-<!--</footer>-->
